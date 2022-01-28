@@ -11,13 +11,6 @@ def load_words(fp):
     return words
 
 
-def fail_gray(word, gray):
-    for letter in gray:
-        if letter in word:
-            return True
-    return False
-
-
 def parse_guesses(guesses):
     game_state = {
         "gray": [],
@@ -36,7 +29,6 @@ def parse_guesses(guesses):
                 game_state["green"][letter].append(i)
             else:
                 raise ValueError(f'"{color}" is not a valid color')
-
     return game_state
 
 
@@ -55,7 +47,6 @@ def check_yellow(word, game_state):
         for i in positions:
             if word[i] == letter:
                 return False
-
     return True
 
 
@@ -67,7 +58,6 @@ def check_green(word, game_state):
         for i in positions:
             if word[i] != letter:
                 return False
-
     return True
 
 
