@@ -18,35 +18,6 @@ def fail_gray(word, gray):
     return False
 
 
-def fail_yellow(word, yellow):
-
-    if not yellow:  # no yellow letters found yet
-        return False  # pass
-
-    for letter, positions in yellow.items():
-
-        if letter not in word:  # yellow letter missing
-            return True  # fail
-
-        for p in positions:
-            if letter == word[p].lower():  # yellow letter at yellow position
-                return True  # fail
-
-    return False  # pass
-
-
-def fail_green(word, green):
-    if not green:  # no green letters found yet
-        return False  # pass
-
-    for letter, positions in green.items():
-        for p in positions:
-            if word[p] != letter:  # green letter not at green position
-                return True  # fail
-
-    return False  # pass
-
-
 def parse_guesses(guesses):
     game_state = {
         "gray": [],
