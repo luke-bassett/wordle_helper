@@ -2,13 +2,16 @@
 Helps you cheat at wordle.
 
 ## Usage
-If you have taken two guesses, "rusty", and "about" and these were your resutls:
+If you have taken two guesses, "rusty", and "about" and these were your results:
 ⬜🟨⬜🟨⬜
 ⬜⬜🟨🟨🟩
+
 then you would type this to see the top five most frequently used valid words:
 
 **Input**
-`python wordle_helper.py -n 5 rusty/gygyg about/ggyyn`
+```
+python wordle_helper.py -n 5 rusty/gygyg about/ggyyn
+```
 
 **Output**
 ```
